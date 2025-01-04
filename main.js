@@ -1,1 +1,12 @@
-Game.spawns["Spawn1"].spawnCreep([WORK,CARRY,MOVE], 'Harvester1');
+const hello = require('helloWorld')
+
+module.exports.loop = function () {
+    var creep = Game.creeps['Harvester1'];
+    var sources = creep.room.find(FIND_SOURCES);
+    if(creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
+        creep.moveTo(sources[0]);
+    }
+
+    test.sayHello()
+
+}
