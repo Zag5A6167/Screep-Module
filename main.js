@@ -1,5 +1,5 @@
 const hello = require('helloWorld')
-
+Game.spawns['Spawn1'].spawnCreep( [WORK, CARRY, MOVE], 'Harvester1' );  
 module.exports.loop = function () {
     var creep = Game.creeps['Harvester1'];
     var sources = creep.room.find(FIND_SOURCES);
@@ -7,6 +7,5 @@ module.exports.loop = function () {
         creep.moveTo(sources[0]);
     }
 
-    helloWorld.sayHello()
-
+    
 }
